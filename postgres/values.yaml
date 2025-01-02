@@ -1,0 +1,14 @@
+postgresql:
+  database: mydb
+  username: admin
+  password: secretpassword
+  storage:
+    size: 10Gi
+
+route:
+  enabled: true
+  host: postgres-app.example.com
+
+pvc:
+  accessMode: ReadWriteOnce
+  size: 10Gi

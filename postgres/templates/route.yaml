@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ .Release.Name }}-postgres-route
+spec:
+  to:
+    kind: Service
+    name: {{ .Release.Name }}-postgres
+  port:
+    targetPort: 5432
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
