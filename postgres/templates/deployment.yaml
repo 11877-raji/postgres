@@ -14,24 +14,24 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres:{{ .Values.appVersion }}
+          image: postgres:{{ .Values.appVersion }}  # Ensure this value is defined in values.yaml
           env:
             - name: POSTGRES_DB
-              value: {{ .Values.postgresql.database }}
+              value: "{{ .Values.postgresql.database }}"  # Ensure this value is defined in values.yaml
             - name: POSTGRES_USER
               valueFrom:
                 secretKeyRef:
                   name: {{ .Release.Name }}-postgres-secret
-                  key: postgres-username
+                  key: postgres-username  # Ensure the key exists in the secret
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ .Release.Name }}-postgres-secret
-                  key: postgres-password
+                  key: postgres-password  # Ensure the key exists in the secret
           volumeMounts:
             - name: postgres-data
               mountPath: /var/lib/postgresql/data
       volumes:
         - name: postgres-data
           persistentVolumeClaim:
-            claimName: {{ .Release.Name }}-postgres-pvc
+            claimName: {{ .Release.Name }}-postgres-pvc  # Ensure the PVC exists

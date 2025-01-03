@@ -3,7 +3,7 @@ postgresql:
   username: admin
   password: secretpassword
   storage:
-    size: 10Gi
+  size: 10Gi
 
 route:
   enabled: true
