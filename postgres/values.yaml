@@ -1,14 +1,5 @@
+appVersion: "13"  # Specify the PostgreSQL version here
 postgresql:
-  database: mydb
-  username: admin
-  password: secretpassword
-  storage:
-  size: 10Gi
-
-route:
-  enabled: true
-  host: postgres-app.example.com
-
-pvc:
-  accessMode: ReadWriteOnce
-  size: 10Gi
+  database: "my_database"  # The name of the database to create
+  username: "myuser"  # PostgreSQL username
+  password: "mypassword"  # PostgreSQL password

@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}-postgres-pvc
 spec:
   accessModes:
-    - {{ .Values.pvc.accessMode }}
+    - ReadWriteOnce
   resources:
     requests:
-      storage: {{ .Values.pvc.size }}
+      storage: 8Gi  # Adjust based on your needs
