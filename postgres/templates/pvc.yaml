@@ -7,4 +7,5 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 8Gi  # Adjust based on your needs
+      storage: 8Gi  # Adjust according to your needs
+  storageClassName: standard  # Ensure this matches the storage class available in your cluster
