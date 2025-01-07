@@ -7,15 +7,3 @@ postgresql:
   database: mydb
   username: admin
   password: admin123
-
-# Persistent Volume
-pvc:
-  name: postgres-pvc
-  storage: 2Gi
-
-
-#appVersion: "13"  # Specify the PostgreSQL version here
-#postgresql:
- # database: "my_database"  # The name of the database to create
-  #username: "myuser"  # PostgreSQL username
-  #password: "mypassword"  # PostgreSQL password
