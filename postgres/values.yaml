@@ -1,9 +1,5 @@
-# PostgreSQL Configuration
+appVersion: "13"  # Specify the PostgreSQL version here
 postgresql:
-  name: postgres
-  image: postgres
-  imageTag: 14
-  port: 5432
-  database: mydb
-  username: admin
-  password: admin123
+ database: "my_database"  # The name of the database to create
+ username: "myuser"  # PostgreSQL username
+ password: "mypassword"  # PostgreSQL password
